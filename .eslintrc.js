@@ -11,5 +11,13 @@ module.exports = {
     "linebreak-style": 0,
     quotes: 0,
     semi: 0,
+    "object-curly-newline": 0,
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src"],
+      },
+    },
   },
 }

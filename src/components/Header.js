@@ -10,7 +10,6 @@ const StyledHeader = styled.div`
 `
 
 const headerStyles = (theme) => css`
-  color: ${theme.colors.secondary};
   display: flex;
   flex-direction: column;
 

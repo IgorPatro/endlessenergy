@@ -16,9 +16,9 @@ module.exports = {
         icon: "src/assets/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
+    "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -30,10 +30,25 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "icons",
+        path: "./src/assets/icons/",
+      },
+      __key: "icons",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "pages",
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/blog`,
+        name: `blog`,
+      },
     },
     {
       resolve: `gatsby-plugin-webfonts`,
@@ -50,6 +65,7 @@ module.exports = {
         usePreconnect: true,
       },
     },
+    "gatsby-plugin-svgr",
     {
       resolve: "gatsby-plugin-root-import",
       options: {

@@ -2,6 +2,8 @@
 import React from "react"
 import { css } from "@emotion/react"
 
+import Button from "components/Button"
+
 const landingHeaderStyles = (theme) => css`
   position: absolute;
   bottom: 40px;
@@ -50,16 +52,6 @@ const landingHeaderStyles = (theme) => css`
   strong {
     color: ${theme.colors.primary};
   }
-
-  a {
-    color: white;
-    background-color: ${theme.colors.primary};
-    text-decoration: none;
-    padding: 0.5em 1em;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 0.5em;
-  }
 `
 
 const LandingHeader = () => {
@@ -72,7 +64,9 @@ const LandingHeader = () => {
         Wybierzemy panele <strong>fotowoltaiczne</strong> dla{" "}
         <strong>Ciebie</strong> i Twojej <strong>rodziny</strong>.
       </h3>
-      <a href="#contact">Napisz do nas</a>
+      <Button color="white" link="#contact">
+        Napisz do nas
+      </Button>
     </div>
   )
 }

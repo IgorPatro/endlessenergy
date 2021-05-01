@@ -15,6 +15,8 @@ const theme = {
     light: "#EEEEEE",
     white: "#ffffff",
     black: "#000000",
+    silver: "#DDDDDD",
+    transparent: "transparent",
   },
   fontFamily: {
     Poppins: "'Poppins', sans-serif",

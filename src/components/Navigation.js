@@ -1,18 +1,69 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react"
 import { css } from "@emotion/react"
 
+import logo from "assets/images/logo.png"
+import { socialMedia } from "data/socialMedia"
+
 const navStyles = css`
   width: 100%;
-  height: 100px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: 35px;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+  }
+`
+
+const listItemStyles = css`
+  width: 25px;
+  height: 25px;
+
+  a {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const Navigation = () => {
-  return <nav css={navStyles}>nawigacja</nav>
+  return (
+    <nav css={navStyles}>
+      <img src={logo} alt="logo" />
+      <ul className="social-media">
+        {socialMedia.map(({ name, link, icon }) => {
+          return (
+            <li css={listItemStyles} key={name}>
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                css={css`
+                  background-image: url(${icon});
+                `}
+              />
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
+  )
 }
 
 export default Navigation

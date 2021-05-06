@@ -9,7 +9,6 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -58,6 +57,7 @@ module.exports = {
             {
               family: "Poppins",
               variants: ["100", "300", "400", "500", "700", "900"],
+              subsets: ["latin"],
             },
           ],
         },
@@ -74,6 +74,7 @@ module.exports = {
         components: path.join(__dirname, "src/components"),
         layout: path.join(__dirname, "src/layout"),
         assets: path.join(__dirname, "src/assets"),
+        data: path.join(__dirname, "src/data"),
       },
     },
   ],

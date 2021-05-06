@@ -5,6 +5,7 @@ import "./globalStyles.css"
 
 import theme from "layout/theme"
 import Navigation from "components/Navigation"
+import Footer from "components/Footer"
 
 const Layout = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <main>
         <Navigation />
         {children}
+        <Footer />
       </main>
     </ThemeProvider>
   )

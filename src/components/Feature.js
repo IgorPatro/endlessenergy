@@ -12,7 +12,8 @@ const featureStyles = (theme) => css`
   align-items: center;
   font-size: 1.9rem;
   text-align: center;
-  transition: color 0.3s, background 0.3s;
+  transition: color 0.5s, background 0.5s;
+  cursor: pointer;
 
   h4 {
     font-size: inherit;
@@ -35,7 +36,7 @@ const featureStyles = (theme) => css`
 
     svg path {
       fill: white;
-      transition: fill 0.3s;
+      transition: fill 0.5s;
     }
   }
 `

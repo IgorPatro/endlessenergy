@@ -2,6 +2,7 @@
 title: Budowa instalcji fotowoltaicznej
 date: 17.03.2021
 image: budowa-instalacji-fotowoltaicznej.png
+slug: budowa-instalacji-fotowoltaicznej
 ---
 
 This is my first post on my new fake blog! How exciting!

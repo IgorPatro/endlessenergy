@@ -2,6 +2,7 @@
 title: Co to fotowoltaika
 date: 30.03.2021
 image: co-to-fotowoltaika.png
+slug: co-to-fotowoltaika
 ---
 
 This is my first post on my new fake blog! How exciting!

@@ -10,8 +10,10 @@ const breakpoints = {
 const theme = {
   colors: {
     primary: "#FEA75E",
+    primaryRGB: "254, 167, 94",
     secondary: "#444444",
     grey: "#828282",
+    dark: "#111111",
     light: "#EEEEEE",
     white: "#ffffff",
     black: "#000000",

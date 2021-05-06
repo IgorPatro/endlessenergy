@@ -6,6 +6,8 @@ import About from "components/sections/About"
 import Projects from "components/sections/Projects"
 import Features from "components/sections/Features"
 import Blog from "components/sections/Blog"
+import Calculator from "components/sections/Calculator"
+import Contact from "components/sections/Contact"
 
 const IndexPage = () => {
   return (
@@ -15,28 +17,8 @@ const IndexPage = () => {
       <Projects />
       <Features />
       <Blog />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Calculator />
+      <Contact />
     </Layout>
   )
 }

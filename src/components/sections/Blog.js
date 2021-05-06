@@ -15,7 +15,7 @@ const blogStyles = css`
   .blog-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
   }
 `
 
@@ -28,6 +28,7 @@ const Blog = () => {
             frontmatter {
               date
               title
+              slug
               image {
                 childImageSharp {
                   fluid {
@@ -58,6 +59,7 @@ const Blog = () => {
                 title={node.frontmatter.title}
                 date={node.frontmatter.date}
                 image={node.frontmatter.image.childImageSharp.fluid.src}
+                url={node.frontmatter.slug}
               />
             )
           })}

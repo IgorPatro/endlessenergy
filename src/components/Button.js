@@ -31,7 +31,7 @@ const StyledButton = styled.button`
 
   &:hover {
     color: ${theme.colors.primary};
-    background-color: white;
+    background-color: ${theme.colors.dark};
   }
 `
 

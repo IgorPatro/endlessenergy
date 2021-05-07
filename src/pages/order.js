@@ -12,11 +12,44 @@ const orderStyles = css`
   display: flex;
   flex-direction: column;
   gap: 50px;
+  align-items: center;
+  min-height: 100vh;
+
+  ${theme.mediaQueries.phone} {
+    padding: 10%;
+  }
+
+  ${theme.mediaQueries.tablet} {
+    padding: 10% 15%;
+    gap: 100px;
+  }
+
+  ${theme.mediaQueries.desktop} {
+    padding: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 70px;
+  }
+
+  ${theme.mediaQueries.bigDesktop} {
+    justify-content: center;
+    gap: 150px;
+  }
+
+  ${theme.mediaQueries.huge} {
+    gap: 200px;
+  }
 
   .image-and-link {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    max-width: 500px;
+
+    ${theme.mediaQueries.desktop} {
+      gap: 25px;
+    }
 
     a {
       display: inline-block;
@@ -26,6 +59,12 @@ const orderStyles = css`
       text-decoration: none;
       padding: 8px 25px;
       align-self: flex-end;
+      transition: color 0.3s, background 0.3s;
+
+      &:hover {
+        color: ${theme.colors.primary};
+        background-color: ${theme.colors.dark};
+      }
     }
   }
 `

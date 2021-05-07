@@ -2,9 +2,6 @@ const path = require("path")
 
 module.exports = {
   flags: { FAST_DEV: true, PRESERVE_WEBPACK_CACHE: true },
-  siteMetadata: {
-    title: "endlessenergy",
-  },
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",

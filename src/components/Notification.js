@@ -47,7 +47,8 @@ const notificationStyles = (theme) => css`
       font-size: inherit;
     }
 
-    a {
+    a,
+    button {
       display: block;
       text-decoration: none;
       background-color: ${theme.colors.primary};
@@ -56,6 +57,7 @@ const notificationStyles = (theme) => css`
       padding: 8px 35px;
       font-size: 0.8em;
       transition: background 0.3s, color 0.3s;
+      border: none;
 
       &:hover {
         background-color: ${theme.colors.dark};
@@ -65,13 +67,19 @@ const notificationStyles = (theme) => css`
   }
 `
 
-const Notification = ({ title, content, linkData }) => {
+const Notification = ({ title, content, linkData, buttonData }) => {
   return (
     <div css={notificationStyles}>
       <div className="content">
         <h6 dangerouslySetInnerHTML={{ __html: title }} />
         <p dangerouslySetInnerHTML={{ __html: content }} />
-        <Link to={linkData.url}>{linkData.content}</Link>
+        {buttonData ? (
+          <button type="button" onClick={buttonData.onClickFunc}>
+            {buttonData.content}
+          </button>
+        ) : (
+          <Link to={linkData.url}>{linkData.content}</Link>
+        )}
       </div>
     </div>
   )
@@ -80,7 +88,13 @@ const Notification = ({ title, content, linkData }) => {
 Notification.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  linkData: PropTypes.objectOf(PropTypes.string).isRequired,
+  linkData: PropTypes.objectOf(PropTypes.string),
+  buttonData: PropTypes.objectOf(PropTypes.string || PropTypes.func),
+}
+
+Notification.defaultProps = {
+  linkData: null,
+  buttonData: null,
 }
 
 export default Notification

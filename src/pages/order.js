@@ -4,6 +4,7 @@ import { ThemeProvider, css } from "@emotion/react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
+import SEO from "components/SEO"
 import theme from "layout/theme"
 import OrderForm from "components/OrderForm"
 
@@ -83,15 +84,18 @@ const OrderPage = () => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
-      <section css={orderStyles}>
-        <OrderForm />
-        <div className="image-and-link">
-          <Img fluid={file.childImageSharp.fluid} />
-          <Link to="/">powrót do domu</Link>
-        </div>
-      </section>
-    </ThemeProvider>
+    <>
+      <SEO pageName="Zamówienie" />
+      <ThemeProvider theme={theme}>
+        <section css={orderStyles}>
+          <OrderForm />
+          <div className="image-and-link">
+            <Img fluid={file.childImageSharp.fluid} />
+            <Link to="/">powrót do domu</Link>
+          </div>
+        </section>
+      </ThemeProvider>
+    </>
   )
 }
 

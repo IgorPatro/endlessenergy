@@ -1,5 +1,6 @@
 import React from "react"
 
+import SEO from "components/SEO"
 import Layout from "layout/Layout"
 import Landing from "components/sections/Landing"
 import About from "components/sections/About"
@@ -11,15 +12,18 @@ import Contact from "components/sections/Contact"
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <Landing />
-      <About />
-      <Projects />
-      <Features />
-      <Blog />
-      <Calculator />
-      <Contact />
-    </Layout>
+    <>
+      <SEO pageName="Home" />
+      <Layout>
+        <Landing />
+        <About />
+        <Projects />
+        <Features />
+        <Blog />
+        <Calculator />
+        <Contact />
+      </Layout>
+    </>
   )
 }
 

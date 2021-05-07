@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react"
 import { css } from "@emotion/react"
+import { Link } from "gatsby"
 
 import logo from "assets/images/logo.png"
 import { socialMedia } from "data/socialMedia"
@@ -58,7 +59,9 @@ const listItemStyles = (theme) => css`
 const Navigation = () => {
   return (
     <nav css={navStyles}>
-      <img src={logo} alt="logo" />
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
       <ul className="social-media">
         {socialMedia.map(({ name, link, icon }) => {
           return (
@@ -69,6 +72,7 @@ const Navigation = () => {
                 rel="noopener noreferrer nofollow"
                 css={css`
                   background-image: url(${icon});
+                  filter: grayscale();
                 `}
               />
             </li>

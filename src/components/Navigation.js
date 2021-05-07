@@ -6,7 +6,7 @@ import { css } from "@emotion/react"
 import logo from "assets/images/logo.png"
 import { socialMedia } from "data/socialMedia"
 
-const navStyles = css`
+const navStyles = (theme) => css`
   width: 100%;
   position: absolute;
   top: 0;
@@ -17,8 +17,16 @@ const navStyles = css`
   justify-content: space-between;
   align-items: center;
 
+  ${theme.mediaQueries.tablet} {
+    padding: 20px;
+  }
+
   img {
     height: 35px;
+
+    ${theme.mediaQueries.tablet} {
+      height: 45px;
+    }
   }
 
   ul {
@@ -28,9 +36,14 @@ const navStyles = css`
   }
 `
 
-const listItemStyles = css`
+const listItemStyles = (theme) => css`
   width: 25px;
   height: 25px;
+
+  ${theme.mediaQueries.tablet} {
+    width: 30px;
+    height: 30px;
+  }
 
   a {
     display: block;

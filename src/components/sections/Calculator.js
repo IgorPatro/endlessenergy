@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import Section from "components/Section"
 import Header from "components/Header"
 import CalculatorScore from "components/CalculatorScore"
+import Paragraph from "components/Paragraph"
 
 import { ReactComponent as InstallationSizeIcon } from "assets/icons/installation-size.calculator.svg"
 import { ReactComponent as EnergyProducedIcon } from "assets/icons/energy-produced.calculator.svg"
@@ -63,6 +64,17 @@ const calculatorStyles = (theme) => css`
       background-color: ${theme.colors.primary};
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
       padding: 0;
+      transition: background 0.3s;
+
+      ${theme.mediaQueries.tablet} {
+        font-size: 1.9rem;
+        width: 270px;
+        height: 40px;
+      }
+
+      &:hover {
+        background-color: white;
+      }
     }
 
     button {
@@ -80,6 +92,20 @@ const calculatorStyles = (theme) => css`
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    ${theme.mediaQueries.tablet} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    ${theme.mediaQueries.desktop} {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 30px;
+    }
+
+    ${theme.mediaQueries.huge} {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 `
 
@@ -115,7 +141,7 @@ const Calculator = () => {
   ]
 
   return (
-    <Section>
+    <Section id="calculator">
       <div css={calculatorStyles}>
         <Header
           subheading="KALKULATOR"
@@ -130,7 +156,7 @@ const Calculator = () => {
             max={60}
             onChange={(e) => setBillValue(e.target.value * 25)}
           />
-          <p>Twój miesięczny rachunek za prąd:</p>
+          <Paragraph>Twój miesięczny rachunek za prąd:</Paragraph>
           <button type="button">
             {billValue}
             &nbsp;zł

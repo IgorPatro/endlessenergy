@@ -9,16 +9,26 @@ import { ReactComponent as TimeIcon } from "assets/icons/time.features.svg"
 import { ReactComponent as HomeIcon } from "assets/icons/home.features.svg"
 import Feature from "components/Feature"
 
-const featuresStyles = css`
+const featuresStyles = (theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
 
   .features-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 25px;
+
+    ${theme.mediaQueries.tablet} {
+      margin-top: 45px;
+      gap: 15px;
+    }
+
+    ${theme.mediaQueries.bigTablet} {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `
 

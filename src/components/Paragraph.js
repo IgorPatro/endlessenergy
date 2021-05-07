@@ -5,6 +5,14 @@ import theme from "layout/theme"
 
 const StyledParagraph = styled.p`
   color: ${({ color }) => theme.colors[color]};
+
+  ${theme.mediaQueries.phone} {
+    font-size: 1.7rem;
+  }
+
+  ${theme.mediaQueries.tablet} {
+    font-size: 1.9rem;
+  }
 `
 
 const Paragraph = ({ children, color }) => {

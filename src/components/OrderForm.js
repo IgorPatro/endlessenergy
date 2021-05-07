@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form"
 import { css } from "@emotion/react"
 
 const orderStyles = (theme) => css`
-  padding: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +36,10 @@ const orderStyles = (theme) => css`
       &:focus {
         border: 1px solid ${theme.colors.primary};
       }
+    }
+
+    p {
+      margin-top: 15px;
     }
   }
 `

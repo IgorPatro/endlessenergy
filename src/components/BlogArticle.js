@@ -8,6 +8,10 @@ const blogArticleStyles = (theme) => css`
   text-decoration: none;
   position: relative;
 
+  ${theme.mediaQueries.desktop} {
+    max-width: 400px;
+  }
+
   img {
     width: 100%;
   }
@@ -20,6 +24,16 @@ const blogArticleStyles = (theme) => css`
     background-color: ${theme.colors.primary};
     padding: 10px;
     font-size: 1.6rem;
+
+    ${theme.mediaQueries.tablet} {
+      font-size: 1.8rem;
+    }
+
+    ${theme.mediaQueries.desktop} {
+      padding: 20px 10px;
+      left: -20px;
+      bottom: -20px;
+    }
 
     h4 {
       font-weight: ${theme.fontWeight.medium};

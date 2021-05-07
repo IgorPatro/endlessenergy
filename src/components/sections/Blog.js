@@ -6,16 +6,26 @@ import Section from "components/Section"
 import Header from "components/Header"
 import BlogArticle from "components/BlogArticle"
 
-const blogStyles = css`
+const blogStyles = (theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
 
   .blog-list {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-top: 25px;
+
+    ${theme.mediaQueries.tablet} {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 45px;
+    }
+
+    ${theme.mediaQueries.desktop} {
+      gap: 65px;
+    }
   }
 `
 

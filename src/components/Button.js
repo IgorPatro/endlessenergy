@@ -11,6 +11,28 @@ const StyledButton = styled.button`
   display: inline-block;
   font-size: 1.5rem;
   width: max-content;
+  transition: color 0.3s, background 0.3s;
+
+  ${theme.mediaQueries.phone} {
+    font-size: 1.6rem;
+  }
+
+  ${theme.mediaQueries.tablet} {
+    font-size: 1.9rem;
+  }
+
+  ${theme.mediaQueries.bigTablet} {
+    font-size: 2.1rem;
+  }
+
+  ${theme.mediaQueries.desktop} {
+    font-size: 1.9rem;
+  }
+
+  &:hover {
+    color: ${theme.colors.primary};
+    background-color: white;
+  }
 `
 
 const Button = ({ children, color, link }) => {

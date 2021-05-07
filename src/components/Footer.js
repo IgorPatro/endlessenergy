@@ -15,8 +15,24 @@ const footerStyles = (theme) => css`
   flex-direction: column;
   font-size: 1.4rem;
 
+  ${theme.mediaQueries.tablet} {
+    font-size: 1.8rem;
+  }
+
+  ${theme.mediaQueries.bigDesktop} {
+    padding: 5% 10%;
+  }
+
   img {
     height: 40px;
+
+    ${theme.mediaQueries.tablet} {
+      height: 50px;
+    }
+
+    ${theme.mediaQueries.bigDesktop} {
+      height: 60px;
+    }
   }
 
   .footer-data {
@@ -24,6 +40,13 @@ const footerStyles = (theme) => css`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    ${theme.mediaQueries.desktop} {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0;
+    }
 
     p {
       font-size: inherit;
@@ -39,23 +62,45 @@ const footerStyles = (theme) => css`
     padding: 5px 0 0 0;
     margin: 10px 0 0 0;
 
+    ${theme.mediaQueries.tablet} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    ${theme.mediaQueries.desktop} {
+      margin: 20px 0 0 0;
+    }
+
+    ${theme.mediaQueries.bigDesktop} {
+      margin: 30px 0 0 0;
+    }
+
     span {
-      line-height: 1.3em;
+      line-height: 1.4em;
     }
   }
 `
 
-const contactListStyles = css`
+const contactListStyles = (theme) => css`
   list-style: none;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 3px;
 
+  ${theme.mediaQueries.desktop} {
+    margin-top: 15px;
+    gap: 5px;
+  }
+
   li {
     display: flex;
     align-items: center;
     gap: 5px;
+
+    ${theme.mediaQueries.desktop} {
+      gap: 10px;
+    }
 
     a {
       color: white;
@@ -68,11 +113,21 @@ const contactListStyles = css`
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      ${theme.mediaQueries.tablet} {
+        width: 25px;
+        height: 25px;
+      }
+
+      ${theme.mediaQueries.desktop} {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 `
 
-const socialsListStyles = css`
+const socialsListStyles = (theme) => css`
   list-style: none;
   display: flex;
   gap: 5px;
@@ -90,6 +145,11 @@ const socialsListStyles = css`
       background-repeat: no-repeat;
       color: white;
       text-decoration: none;
+
+      ${theme.mediaQueries.tablet} {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 `

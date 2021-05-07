@@ -9,6 +9,10 @@ const projectStyles = (theme) => css`
   min-height: 300px;
   cursor: pointer;
 
+  ${theme.mediaQueries.desktop} {
+    max-width: 400px;
+  }
+
   .img-background {
     position: absolute;
     top: 0;
@@ -36,6 +40,12 @@ const projectStyles = (theme) => css`
     font-size: 2rem;
     opacity: 0;
     transition: opacity 0.5s;
+
+    ${theme.mediaQueries.desktop} {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      font-size: 2.2rem;
+    }
 
     span {
       font-size: 0.7em;

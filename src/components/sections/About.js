@@ -8,20 +8,44 @@ import Header from "components/Header"
 import Paragraph from "components/Paragraph"
 import Button from "components/Button"
 
-const mainWrapperStyles = css`
+const mainWrapperStyles = (theme) => css`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  ${theme.mediaQueries.desktop} {
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
-const aboutContentStyles = css`
+const aboutContentStyles = (theme) => css`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  ${theme.mediaQueries.desktop} {
+    width: 45%;
+    gap: 20px;
+  }
+
+  ${theme.mediaQueries.huge} {
+    width: 40%;
+  }
 `
 
-const aboutImageStyles = css`
+const aboutImageStyles = (theme) => css`
   width: 100%;
+
+  ${theme.mediaQueries.desktop} {
+    width: 40%;
+  }
+
+  ${theme.mediaQueries.huge} {
+    width: 30%;
+  }
 `
 
 const About = () => {

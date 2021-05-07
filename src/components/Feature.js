@@ -15,6 +15,20 @@ const featureStyles = (theme) => css`
   transition: color 0.5s, background 0.5s;
   cursor: pointer;
 
+  ${theme.mediaQueries.tablet} {
+    font-size: 2.3rem;
+    padding: 30px 90px;
+  }
+
+  ${theme.mediaQueries.bigTablet} {
+    padding: 20px 20px;
+  }
+
+  ${theme.mediaQueries.desktop} {
+    max-width: 400px;
+    padding: 30px 40px;
+  }
+
   h4 {
     font-size: inherit;
     font-weight: ${theme.fontWeight.medium};

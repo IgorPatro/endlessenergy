@@ -12,9 +12,15 @@ const StyledHeader = styled.div`
 const headerStyles = (theme) => css`
   display: flex;
   flex-direction: column;
+  font-size: 2.4rem;
+
+  ${theme.mediaQueries.tablet} {
+    font-size: 3.1rem;
+  }
 
   h2 {
     margin: 0.5em 0;
+    font-size: inherit;
 
     strong {
       color: ${theme.colors.primary};
@@ -22,12 +28,17 @@ const headerStyles = (theme) => css`
   }
 
   h5 {
+    font-size: 0.6em;
     font-weight: ${theme.fontWeight.medium};
   }
 
   .ruler {
     width: 220px;
     border-top: 1.5px solid ${theme.colors.primary};
+
+    ${theme.mediaQueries.tablet} {
+      width: 250px;
+    }
   }
 `
 

@@ -6,11 +6,17 @@ import Header from "components/Header"
 import Project from "components/Project"
 import { projectsList } from "data/projects"
 
-const projectsListStyles = css`
+const projectsListStyles = (theme) => css`
   margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  ${theme.mediaQueries.tablet} {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 45px;
+  }
 `
 
 const Projects = () => {

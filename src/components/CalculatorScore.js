@@ -17,6 +17,15 @@ const calculatorScoreStyles = (theme) => css`
   transition: color 0.3s, background 0.3s;
   cursor: pointer;
 
+  ${theme.mediaQueries.tablet} {
+    font-size: 2.4rem;
+  }
+
+  ${theme.mediaQueries.desktop} {
+    aspect-ratio: 4/3;
+    max-width: 250px;
+  }
+
   svg path {
     fill: ${theme.colors.secondary};
     transition: fill 0.3s;

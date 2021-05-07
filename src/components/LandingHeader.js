@@ -21,11 +21,11 @@ const landingHeaderStyles = (theme) => css`
   }
 
   ${theme.mediaQueries.tablet} {
-    font-size: 3.9rem;
+    font-size: 4.2rem;
   }
 
   ${theme.mediaQueries.bigTablet} {
-    font-size: 4.2rem;
+    font-size: 4.6rem;
     max-width: 700px;
   }
 

@@ -20,11 +20,11 @@ jobs:
           yarn
           yarn build
           
-      - name: 📂 Send files
-        uses: sebastianpopp/ftp-action@releases/v2
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          host: ftp.webing05.vot.pl
-          user: ${{ secrets.ftp_username }}
+          server: ftp.webing05.vot.pl
+          username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          localDir: "public"
-          options: "--delete --asci"
+          local-dir: "./public/"
+          dry-run: true

@@ -14,12 +14,6 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: '15.8.0'
-          
-      - name: Log username and password
-        run: |
-          echo 'test'
-          echo '${{ secrets.ftp_username }}'
-          echo '${{ secrets.ftp_password }}'
 
       - name: 🔨 Build Project
         run: |
@@ -32,3 +26,4 @@ jobs:
           server: ftp.webing05.vot.pl
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
+          protocol: ftps

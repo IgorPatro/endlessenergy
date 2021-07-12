@@ -21,9 +21,10 @@ jobs:
           yarn build
           
       - name: 📂 Send files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          server: ftp.webing05.vot.pl
-          username: ${{ secrets.ftp_username }}
+          host: ftp.webing05.vot.pl
+          user: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          protocol: ftps
+          localDir: "public"
+          options: "--delete --asci"

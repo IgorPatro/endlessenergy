@@ -14,6 +14,11 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: '15.8.0'
+          
+      - name: Log username and password
+        run: |
+          echo ${{ secrets.ftp_username }}
+          echo ${{ secrets.ftp_password }}
 
       - name: 🔨 Build Project
         run: |
